@@ -605,6 +605,9 @@ header {
             @media screen and (max-width: 1440px) {
                 height: 22rem;
             }
+            @media screen and (max-height:800px) {
+                height: 18rem ;
+            }
         }
         ul {
             display: flex;
