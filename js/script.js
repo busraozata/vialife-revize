@@ -1,3 +1,11 @@
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
+    $(".header-inner").addClass("sticky");
+  } else {
+    $(".header-inner").removeClass("sticky");
+  }
+});
+
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 50,
   autoplay: {
@@ -19,3 +27,11 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+/* ------------------------------------------------------------- */
+
+$(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
+    var imgPath = $(this).attr("data-image");
+  
+    $(".mega-menu .img-wrapper img").attr("src", imgPath);
+  });
+  /* ------------------------------------------------------------- */
