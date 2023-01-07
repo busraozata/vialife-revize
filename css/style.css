@@ -1958,7 +1958,7 @@ header .header-inner .right-area .hamburger-bar .line:nth-child(3)::before {
 
 @media screen and (max-width: 1440px) {
   .blog .swiper {
-    padding: 4rem 3rem 12rem 3rem;
+    padding: 4rem 2rem 12rem 2rem;
   }
 }
 
