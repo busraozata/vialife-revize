@@ -200,7 +200,35 @@ $xxl-breakpoint: 1400px; //Extra extra large
         }
     }
 }
-
+.js div#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999999999999999999999999999999999999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff;
+    display: block !important;
+    &::before {
+        content: "";
+        background: url(../img/vialifegif.gif) no-repeat;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: 50%;
+        left: 0;
+        bottom: 0;
+        opacity: 0.5;
+        z-index: 99999999999999999999999999999999999999999;
+        animation: crescendo 1.5s alternate infinite ease-in;
+        
+        @media screen and (max-width: $sm-breakpoint) {
+            background-size: 70%;
+        }
+    }
+}
 header {
     position: absolute;
     width: 100%;
