@@ -6,6 +6,17 @@ $(window).scroll(function () {
   }
 });
 
+$(document).ready(function () {
+  $(".services_toggle").click(function () {
+    $(".services-menu").animate({ width: "toggle" });
+    $(".list").delay("200").fadeToggle("slow");
+  });
+});
+
+$(".change-lang").click(function () {
+  $(".lang-list").toggleClass("active");
+});
+
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 50,
   autoplay: {
@@ -94,6 +105,7 @@ var swiper = new Swiper(".mySwiperServices", {
     },
   },
 });
+
 /* ------------------------------------------------------------- */
 
 $(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
