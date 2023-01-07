@@ -859,6 +859,12 @@ header {
         @media screen and (max-width: $lg-breakpoint) {
             padding: 1rem 0rem 1rem 0rem;
         }
+        .my-3{
+            @media screen and (max-width: 1440px) {
+                margin-bottom: 0rem !important;
+                margin-top: 0.5rem !important;
+            }
+        }
 
         .list {
             &:hover {
