@@ -885,7 +885,7 @@ header {
             padding: 1rem 2rem 2rem 0rem;
         }
         @media screen and (max-width: $lg-breakpoint) {
-            padding: 1rem 0rem 1rem 0rem;
+            padding: 1rem 2rem 1rem 2rem;
         }
         .my-3{
             @media screen and (max-width: 1440px) {
@@ -918,7 +918,7 @@ header {
                 z-index: -4;
                 top: 0;
                 bottom: 0;
-                background: url(../img/shape3.png) no-repeat;
+                background: url(../img/shape-border.png) no-repeat;
                 background-size: contain;
                 background-position: center;
             }
@@ -1126,6 +1126,9 @@ header {
         @media screen and (max-width: $xl-breakpoint) {
             display: none;
         }
+        @media screen and (max-height: 750px) {
+            bottom: 2rem;
+        }
         &::before {
             content: "";
             height: 31rem;
@@ -1136,8 +1139,11 @@ header {
             @media screen and (max-width: 1440px) {
                 height: 22rem;
             }
-            @media screen and (max-height: 800px) {
+            @media screen and (max-height: 820px) {
                 height: 20rem;
+            }
+            @media screen and (max-height: 790px) {
+                height: 18rem;
             }
         }
         ul {

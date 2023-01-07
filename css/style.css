@@ -1166,7 +1166,7 @@ header .header-inner .right-area .hamburger-bar .line:nth-child(3)::before {
 
 @media screen and (max-width: 991px) {
   .services-menu .right-area {
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 1rem 2rem 1rem 2rem;
   }
 }
 
@@ -1203,7 +1203,7 @@ header .header-inner .right-area .hamburger-bar .line:nth-child(3)::before {
   z-index: -4;
   top: 0;
   bottom: 0;
-  background: url(../img/shape3.png) no-repeat;
+  background: url(../img/shape-border.png) no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -1548,6 +1548,12 @@ header .header-inner .right-area .hamburger-bar .line:nth-child(3)::before {
   }
 }
 
+@media screen and (max-height: 750px) {
+  .banner .social-media {
+    bottom: 2rem;
+  }
+}
+
 .banner .social-media::before {
   content: "";
   height: 31rem;
@@ -1563,9 +1569,15 @@ header .header-inner .right-area .hamburger-bar .line:nth-child(3)::before {
   }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 820px) {
   .banner .social-media::before {
     height: 20rem;
+  }
+}
+
+@media screen and (max-height: 790px) {
+  .banner .social-media::before {
+    height: 18rem;
   }
 }
 
