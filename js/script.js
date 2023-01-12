@@ -106,7 +106,32 @@ var swiper = new Swiper(".mySwiperServices", {
     },
   },
 });
+var swiper = new Swiper(".mySwiperDoctors", {
 
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1600: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    
+  },
+});
 var swiper = new Swiper(".mySwiperGallery", {
   slidesPerView: 3,
   spaceBetween: 30,
