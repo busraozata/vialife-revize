@@ -107,7 +107,6 @@ var swiper = new Swiper(".mySwiperServices", {
   },
 });
 var swiper = new Swiper(".mySwiperDoctors", {
-
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -129,15 +128,27 @@ var swiper = new Swiper(".mySwiperDoctors", {
       slidesPerView: 4,
       spaceBetween: 40,
     },
-    
   },
 });
 var swiper = new Swiper(".mySwiperGallery", {
-  slidesPerView: 3,
   spaceBetween: 30,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
   },
 });
 
@@ -155,3 +166,10 @@ $(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
   $(".mega-menu .img-wrapper img").attr("src", imgPath);
 });
 /* ------------------------------------------------------------- */
+let dropdowns = document.querySelectorAll(".dropdown-toggle");
+dropdowns.forEach((dd) => {
+  dd.addEventListener("click", function (e) {
+    var el = this.nextElementSibling;
+    el.style.display = el.style.display === "block" ? "none" : "block";
+  });
+});
