@@ -40,10 +40,10 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper = new Swiper(".mySwiperBlog", {
   spaceBetween: 50,
-  /* autoplay: {
+  autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-  }, */
+  },
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -111,6 +111,10 @@ var swiper = new Swiper(".mySwiperDoctors", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -135,6 +139,10 @@ var swiper = new Swiper(".mySwiperGallery", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   breakpoints: {
     640: {
