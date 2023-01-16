@@ -115,6 +115,67 @@ var swiper = new Swiper(".mySwiperDoctors", {
     delay: 2500,
     disableOnInteraction: false,
   },
+  slidesPerView: 2,
+  spaceBetween: 20,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1600: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
+});
+var swiper = new Swiper(".mySwiperServices", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 2,
+  spaceBetween: 20,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1600: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
+});
+var swiper = new Swiper(".mySwiperLastBlog", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -159,7 +220,28 @@ var swiper = new Swiper(".mySwiperGallery", {
     },
   },
 });
+var swiper = new Swiper(".mySwiperGallery2", {
+  spaceBetween: 30,
 
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  },
+});
 $("#preloader")
   .delay(1000)
   .fadeOut("slow", function () {

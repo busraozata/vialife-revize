@@ -30,7 +30,7 @@
                                 <div class="nav-menu d-none d-lg-flex align-items-center justify-content-between ">
 
                                     <ul class="navigation d-lg-flex align-items-center justify-content-center ">
-                                        <li><a href="index2.html" class="nav-link active">ANA SAYFA</a></li>
+                                        <li><a href="index.html" class="nav-link active">ANA SAYFA</a></li>
                                         <li class="dropdown"><a class="nav-link" href="#" data-toggle="dropdown">KURUMSAL</a>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                                 <li><a class="dropdown-item" href="about.html">Hakkımızda</a></li>
@@ -142,7 +142,7 @@
                             <div class="right-area d-flex ">
 
                                 <div class="time">
-                                    <a href="" class="border-change">RANDEVU AL</a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">RANDEVU AL</a>
                                 </div>
                                 <div class="menu-bar services_toggle">
                                     <label for="hamburger" class="hamburger " class="">
@@ -407,12 +407,85 @@
         </div>
 
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Randevu Al</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <form action="">
+
+                            <div class="row">
+
+                                <div class="col-lg-6">
+                                    <div class="form-group d-flex flex-column">
+                                        <label for="">Ad, Soyad*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group d-flex flex-column">
+                                        <label for="">Telefon Numarası*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group d-flex flex-column">
+                                        <label for="">E-Posta*</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group d-flex flex-column">
+                                        <label for="">Tedavi*</label>
+                                        <select name="" id="" class="form-control">
+                                            <option value="" selected hidden></option>
+                                            <option value="">Saç Ekimi</option>
+                                            <option value="">Diş Tedavileri</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-group d-flex flex-column">
+                                        <label for="datetimepicker">Randevu Tarihi*</label>
+                                        <input class="form-control" type="date" id="datetimepicker" name="datetimepicker" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-group d-flex flex-column">
+                                        <label for="time">Randevu saati*</label>
+                                        <input type="time" class="form-control" id="timepicker" name="timepicker">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group d-flex flex-column">
+                                        <label for="">Mesajınız*</label>
+                                        <textarea name="" id="" cols="30" rows="8" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button class="btn">
+                                        GÖNDER
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="sub-banner d-flex align-items-end" style="background: url(./img/sub-banner4.jpg) no-repeat; background-position: center; background-size: cover;">
         <div class="container-fluid">
             <ul class="link-area d-flex align-items-end">
                 <li class="d-flex align-items-end"><a href="">BLOG</a></li>
-                <li class="d-lg-none d-flex align-items-end"><a href=""></a></li>
             </ul>
         </div>
     </section>
@@ -428,7 +501,7 @@
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <div> <a href="blog-detail.html" class="btn"><span>Devam Et</span></a></div>
 
-                            <span class="title">-Şubat 12 2023</span>
+                            <span class="title"><strong>-Şubat</strong> 12 2023</span>
 
                         </div>
                     </div>
@@ -501,160 +574,258 @@
                 <div class="col-lg-12">
                     <div class="title">
                         <h3>Son Yazılar</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        <p class="d-lg-block d-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
                             maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+            </div>
+            <div class="list d-lg-block d-none">
+                <div class="row ">
+               
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat </strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page2.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5">
-                    <div class="card">
-                        <a href="blog-detail.html" class="link">
-                            <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
-                                <span class="title">-Şubat 12 2023</span>
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
+    <section class="blog-list-section d-lg-none d-block">
+        <div class="container-fluid">
+            <div class="swiper mySwiperLastBlog">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <a href="blog-detail.html" class="link">
+                                <img class="card-img-top" src="./img/blog-page3.jpg" alt="Card image cap">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Cilt Temizliği Nasıl Uygulanmalıdır?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="blog-detail.html" class="btn"><span>Devam Et</span></a>
+                                    <span class="title"><strong>-Şubat</strong> 12 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigate d-flex align-items-center justify-content-center">
 
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container-fluid">
