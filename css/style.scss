@@ -95,6 +95,10 @@ $xl-breakpoint: 1200px; //Extra large
 $xxl-breakpoint: 1400px; //Extra extra large
 
 @mixin btn {
+    &:hover {
+        transform: scale(1.1);
+    }
+    transition: 0.3s all;
     position: relative;
     margin-top: 1rem;
     padding: 1.2rem 1rem;
@@ -419,6 +423,9 @@ header {
         }
 
         &.sticky {
+            -webkit-box-shadow: -1px 4px 17px -7px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 4px 17px -7px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 4px 17px -7px rgba(0, 0, 0, 0.75);
             position: fixed;
             top: 0;
             left: 0;
@@ -427,6 +434,9 @@ header {
             z-index: 999999;
             transition: 1s all;
             height: 6rem;
+            .nav-link {
+                padding: 2rem 0.8rem !important;
+            }
 
             .navbar-brand {
                 img {
@@ -504,6 +514,7 @@ header {
                         min-width: 12rem !important;
                         ul {
                             li {
+                                margin-bottom: 0.4rem;
                                 text-align: left;
                                 a {
                                     padding-left: 3rem;
@@ -534,6 +545,8 @@ header {
                     .multi-level {
                         li {
                             margin-bottom: 1.5rem;
+                            a {
+                            }
                         }
                     }
                     .dropdown-item.active,
@@ -541,14 +554,15 @@ header {
                         background-color: transparent !important;
                     }
                     .multi-level {
-                        background-color: rgba(0, 0, 0, 0.274) !important;
+                        background-color: rgba(0, 0, 0, 0.5) !important;
                         li {
                             a {
                                 span {
+                                    transition: 0.6s all;
+                                    &:hover {
+                                        font-weight: 900 !important;
+                                    }
                                     font-weight: 500 !important;
-                                }
-                                &:hover {
-                                    color: var(--color-turquoise);
                                 }
                             }
                         }
@@ -628,9 +642,6 @@ header {
                     }
 
                     li {
-                        &:hover {
-                            background-color: rgba(255, 255, 255, 0.486);
-                        }
                         .nav-link {
                             font-weight: 600;
                             font-size: 1.4rem;
@@ -643,7 +654,9 @@ header {
                             &.active {
                                 font-weight: bold;
                             }
-
+                            &:hover {
+                                color: var(--color-dark-gray) !important;
+                            }
                             @media screen and(max-width:1800px) {
                                 font-size: 1.2rem;
                                 padding: 1rem 0.7rem;
@@ -675,9 +688,14 @@ header {
                     display: none;
                 }
                 a {
+                    &:hover {
+                        background-color: var(--color-turquoise);
+                        color: var(--color-white);
+                    }
                     &.border-change {
                         border: 1px solid #f3f5f5;
                     }
+                    transition: 0.3s all;
                     color: var(--color-turquoise);
                     font-style: italic;
                     font-weight: 600;
@@ -1052,14 +1070,14 @@ header {
                 }
                 span {
                     &:last-child {
-                      font-size: 6rem;
-                      font-weight: 400 !important;
-                      line-height: 0;
-                      margin-bottom: 2rem;
-                      margin-top: 0.5rem;
-                      @media screen and (max-width: $xl-breakpoint) {
-                        font-size: 4.5rem !important;
-                    }
+                        font-size: 6rem;
+                        font-weight: 400 !important;
+                        line-height: 0;
+                        margin-bottom: 2rem;
+                        margin-top: 0.5rem;
+                        @media screen and (max-width: $xl-breakpoint) {
+                            font-size: 4.5rem !important;
+                        }
                     }
                 }
             }
@@ -1215,10 +1233,24 @@ header {
         }
     }
 }
+
 .modal {
+    transition: 0.8s all !important;
     z-index: 9999999999;
     background-color: rgba(0, 0, 0, 0.438);
     border-radius: 0;
+    &.fade-scale {
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transition: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+        transition: all 0.25s linear;
+    }
+
+    &.fade-scale.in {
+        opacity: 1;
+        transform: scale(1);
+    }
     .btn,
     .btn-close {
         &:focus {
@@ -1336,6 +1368,14 @@ header {
                 font-weight: 600;
                 font-size: 1rem;
                 color: var(--color-dark-gray);
+                transition: 0.3s all;
+
+                &:hover {
+                    color: var(--color-turquoise);
+                    border: 1px solid var(--color-turquoise);
+                    border-radius: 0;
+                    padding-left: 1rem;
+                }
                 &:focus {
                     box-shadow: none;
                     outline: none;
@@ -2608,6 +2648,13 @@ header {
                     font-weight: 600;
                     font-size: 1rem;
                     color: var(--color-dark-gray);
+                    transition: 0.3s all;
+                    &:hover {
+                        color: var(--color-turquoise);
+                        border: 1px solid var(--color-turquoise);
+                        border-radius: 0;
+                        padding-left: 1rem;
+                    }
                     &:focus {
                         box-shadow: none;
                         outline: none;
@@ -2820,7 +2867,7 @@ header {
                 background-color: #199097;
                 background: linear-gradient(45deg, #ffffff, #7dafb5, #539ea5); /* , #289097 */
                 background-size: 600% 100%;
-                animation: gradient 3s linear infinite;
+                animation: gradient 2s linear infinite;
                 animation-direction: alternate;
                 height: 100%;
                 position: relative;
@@ -2858,7 +2905,14 @@ header {
                         font-style: italic;
                         font-weight: 600;
                         font-size: 1rem;
+                        transition: 0.3s all;
                         color: var(--color-dark-gray);
+                        &:hover {
+                            color: var(--color-turquoise);
+                            border: 1px solid var(--color-turquoise);
+                            border-radius: 0;
+                            padding-left: 1rem;
+                        }
                         &:focus {
                             box-shadow: none;
                             outline: none;
@@ -2886,7 +2940,7 @@ header {
 }
 
 .service-detail {
-    padding: 4rem 10rem 1rem 10rem;
+    padding: 4rem 13rem 1rem 13rem;
     @media screen and (max-width: 1440px) {
         padding: 12rem 3rem 1rem 3rem;
     }
@@ -2905,20 +2959,25 @@ header {
         }
     }
     .col-left {
+        border-radius: 0;
+        padding: 3rem;
+        padding-top: 4rem;
+        -webkit-box-shadow: -1px 4px 10px -7px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 4px 10px -7px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px 4px 10px -7px rgba(0, 0, 0, 0.75);
+    }
+    .content {
         .img-wrapper {
             padding: 0rem 1rem 1rem 0rem;
             position: relative;
             z-index: 9;
-            @media screen and (max-width: $lg-breakpoint) {
-                margin-bottom: 2rem;
-            }
             @media screen and (max-width: $sm-breakpoint) {
-                padding: 0rem 0rem 0rem 0rem;
+                padding: 0rem 1rem 1rem 0rem;
             }
             &::after {
                 content: "";
-                height: 15rem !important;
-                width: 38rem !important;
+                height: 23rem;
+                width: 20rem;
                 bottom: 0;
                 right: 0;
                 position: absolute;
@@ -2931,7 +2990,6 @@ header {
                 @media screen and (max-width: $sm-breakpoint) {
                     right: 0;
                     bottom: 0;
-                    display: none;
                 }
             }
             img {
@@ -2939,20 +2997,17 @@ header {
                     height: 34rem;
                     object-fit: cover;
                 }
-                @media screen and (max-width: $xl-breakpoint) {
-                    height: 24rem;
-                }
                 @media screen and (max-width: $sm-breakpoint) {
                     height: 20rem;
                 }
             }
         }
-    }
-    .col-right {
         h4 {
             color: var(--text-gray);
             font-weight: 600;
             font-size: 2.3rem;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
             @media screen and (max-width: $xl-breakpoint) {
                 font-size: 2rem;
             }
@@ -2966,19 +3021,197 @@ header {
             font-weight: 400;
             font-size: 1.2rem;
             font-style: italic;
+            text-align: left !important;
             @media screen and (max-width: 1440px) {
                 font-size: 1rem;
-            }
-            @media screen and (max-width: $lg-breakpoint) {
-                text-align: center;
             }
         }
     }
 
     .img-gallery {
-        margin-top: 5rem;
+        margin-top: 3rem;
         @media screen and (max-width: $xl-breakpoint) {
             margin-top: 1rem;
+        }
+    }
+}
+
+.widgets {
+    padding-left: 2.5rem;
+    @media screen and (max-width: $xl-breakpoint) {
+        padding-left: 0rem;
+    }
+    .right-area {
+        position: relative;
+        height: 35rem;
+        @media screen and (max-width: $xl-breakpoint) {
+            margin-top: 6rem;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+            margin-top: 4rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+            height: 32rem;
+        }
+        h3 {
+            font-family: "Waterfall", cursive;
+
+            line-height: 0;
+            color: var(--color-dark-gray);
+            font-size: 7.5rem;
+            letter-spacing: 1;
+            margin-bottom: 1rem;
+            position: absolute;
+            z-index: 99;
+            width: 34rem;
+            left: -2rem;
+            top: 0rem;
+            @media screen and (max-width: 1800px) {
+                font-size: 6.8rem;
+            }
+            @media screen and (max-width: 1700px) {
+                font-size: 6rem;
+            }
+            @media screen and (max-width: 1440px) {
+                width: 27rem;
+                font-size: 6.5rem;
+            }
+            @media screen and (max-width: $lg-breakpoint) {
+                left: 0;
+            }
+            @media screen and (max-width: $sm-breakpoint) {
+                width: 100%;
+                font-size: 4.5rem;
+                left: 0;
+            }
+        }
+        .form {
+            background-color: #199097;
+            background: linear-gradient(45deg, #ffffff, #7dafb5, #539ea5); /* , #289097 */
+            background-size: 600% 100%;
+            animation: gradient 3s linear infinite;
+            animation-direction: alternate;
+            height: 100%;
+            position: relative;
+            z-index: 9;
+            form {
+                padding: 6rem 3.5rem 2.5rem 3.5rem;
+                @media screen and (max-width: $xl-breakpoint) {
+                    padding: 6rem 3.5rem 2.5rem 3.5rem;
+                }
+                @media screen and (max-width: $sm-breakpoint) {
+                    padding: 4rem 2rem 2rem 2rem;
+                }
+                .form-group {
+                    margin-bottom: 0.8rem;
+                    label {
+                        color: var(--color-dark-gray);
+                        font-weight: 400;
+                        font-size: 1.1rem;
+                    }
+                    .form-control {
+                        border-radius: 0;
+                        background-color: transparent;
+                        border: 1px solid var(--color-dark-gray);
+                        resize: none;
+                        &:focus {
+                            outline: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+                .btn {
+                    background-color: transparent;
+                    border: none;
+                    padding-left: 0rem;
+                    font-style: italic;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: var(--color-dark-gray);
+                    transition: 0.3s all;
+                    &:hover {
+                        color: var(--color-turquoise);
+                        border: 1px solid var(--color-turquoise);
+                        border-radius: 0;
+                        padding-left: 1rem;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+    .last-services {
+        .swiper {
+            .swiper-slide {
+                .card {
+                    .img-wrapper {
+                        img {
+                            height: 17rem !important;
+                        }
+                        padding: 0rem 1rem 1rem 0rem;
+                        &::after {
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                    .card-body {
+                        h5 {
+                            text-align: left;
+                            margin-top: 2rem;
+                            font-size: 1.4rem !important;
+                            @media screen and (max-width: $sm-breakpoint) {
+                                font-size: 1.2rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navigate {
+            margin-top: 1rem !important;
+        }
+    }
+    .e-newsletter {
+        margin-top: 3rem;
+        h4 {
+            color: var(--color-dark-gray);
+
+            font-weight: 600;
+            font-size: 1.6rem;
+            @media screen and (max-width: $sm-breakpoint) {
+                font-size: 1.3rem;
+            }
+        }
+        p {
+            color: var(--color-gray);
+            font-weight: 300;
+            font-style: italic;
+        }
+        .form-group {
+            display: flex;
+            input {
+                border-radius: 0;
+                border: 1px solid var(--color-dark-gray);
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            .btn {
+                border: 1px solid var(--color-dark-gray);
+                border-radius: 0;
+                font-weight: 600;
+                font-style: italic;
+                background-color: var(--color-turquoise);
+                color: var(--color-white);
+                transition: 0.3s all;
+                &:hover {
+                    background-color: var(--color-dark-gray);
+                }
+            }
         }
     }
 }
@@ -3483,129 +3716,6 @@ header {
     }
 }
 
-.speed-appointment {
-    padding: 5rem 12rem;
-    @media screen and (max-width: 1440px) {
-        padding: 5rem 5rem;
-    }
-    @media screen and (max-width: $xl-breakpoint) {
-        padding: 3rem 4rem;
-    }
-    @media screen and (max-width: $lg-breakpoint) {
-        padding: 3rem 2rem;
-    }
-    @media screen and (max-width: $sm-breakpoint) {
-        padding: 3rem 1rem 0rem 1rem;
-    }
-    .left-area {
-        padding-right: 3rem;
-        position: relative;
-        @media screen and (max-width: 1440px) {
-            padding-right: 1rem;
-        }
-        @media screen and (max-width: $xl-breakpoint) {
-            margin-bottom: 3rem;
-        }
-        @media screen and (max-width: $xl-breakpoint) {
-            margin-bottom: 3rem;
-        }
-
-        h3 {
-            font-family: "Waterfall", cursive;
-
-            line-height: 0;
-            color: var(--color-dark-gray);
-            font-size: 7.5rem;
-            letter-spacing: 1;
-            margin-bottom: 1rem;
-            position: absolute;
-            z-index: 99;
-            width: 34rem;
-            left: -0.8rem;
-            top: 0rem;
-            @media screen and (max-width: 1800px) {
-                font-size: 6.8rem;
-            }
-            @media screen and (max-width: 1700px) {
-                font-size: 6rem;
-            }
-            @media screen and (max-width: 1440px) {
-                width: 27rem;
-                font-size: 6.5rem;
-            }
-            @media screen and (max-width: $sm-breakpoint) {
-                width: 100%;
-                left: 0;
-                font-size: 4.5rem;
-            }
-        }
-        .form {
-            background-color: #199097;
-            background: linear-gradient(45deg, #ffffff, #7dafb5, #539ea5); /* , #289097 */
-            background-size: 600% 100%;
-            animation: gradient 3s linear infinite;
-            animation-direction: alternate;
-            height: 100%;
-            position: relative;
-            z-index: 9;
-            form {
-                padding: 6rem 3.5rem 2.5rem 3.5rem;
-                @media screen and (max-width: $xl-breakpoint) {
-                    padding: 6rem 3.5rem 2.5rem 3.5rem;
-                }
-                @media screen and (max-width: $sm-breakpoint) {
-                    padding: 4rem 2rem 2rem 2rem;
-                }
-                .form-group {
-                    margin-bottom: 0.8rem;
-                    label {
-                        color: var(--color-dark-gray);
-                        font-weight: 400;
-                        font-size: 1.1rem;
-                    }
-                    .form-control {
-                        border-radius: 0;
-                        background-color: transparent;
-                        border: 1px solid var(--color-dark-gray);
-                        resize: none;
-                        &:focus {
-                            outline: none;
-                            box-shadow: none;
-                        }
-                    }
-                }
-                .btn {
-                    background-color: transparent;
-                    border: none;
-                    padding-left: 0rem;
-                    font-style: italic;
-                    font-weight: 600;
-                    font-size: 1rem;
-                    color: var(--color-dark-gray);
-                    &:focus {
-                        box-shadow: none;
-                        outline: none;
-                    }
-                }
-            }
-        }
-    }
-    .right-area {
-        padding-left: 3rem;
-        @media screen and (max-width: $xl-breakpoint) {
-            padding-left: 1rem !important;
-        }
-        p {
-            font-size: 1.2rem;
-            color: var(--text-gray);
-            font-style: italic;
-            @media screen and (max-width: 1440px) {
-                font-size: 1rem;
-            }
-        }
-    }
-}
-
 .fancybox-container {
     z-index: 99999999999999999999;
 }
@@ -4051,6 +4161,10 @@ header {
                     font-weight: 600;
                     font-size: 3rem;
                     margin-bottom: 1rem;
+                    transition: 0.3s all;
+                    &:hover {
+                        color: var(--color-turquoise);
+                    }
                     @media screen and (max-width: 1440px) {
                         font-size: 2rem;
                     }
@@ -4224,7 +4338,14 @@ header {
                     font-style: italic;
                     font-weight: 600;
                     font-size: 1rem;
+                    transition: 0.3s all;
                     color: var(--color-dark-gray);
+                    &:hover {
+                        color: var(--color-turquoise);
+                        border: 1px solid var(--color-turquoise);
+                        border-radius: 0;
+                        padding-left: 1rem;
+                    }
                     &:focus {
                         box-shadow: none;
                         outline: none;
@@ -4320,6 +4441,10 @@ header {
                 margin-bottom: 0.5rem;
                 font-style: italic;
                 margin-top: 1rem;
+                transition: 0.3s all;
+                &:hover {
+                    color: var(--color-gray);
+                }
                 @media screen and (max-width: $xl-breakpoint) {
                     font-size: 1.2rem;
                 }
@@ -4944,6 +5069,13 @@ header {
                 font-weight: 600;
                 font-size: 1rem;
                 color: var(--color-dark-gray);
+                transition: 0.3s all;
+                &:hover {
+                    color: var(--color-turquoise);
+                    border: 1px solid var(--color-turquoise);
+                    border-radius: 0;
+                    padding-left: 1rem;
+                }
                 &:focus {
                     box-shadow: none;
                     outline: none;
@@ -5053,6 +5185,10 @@ footer {
                     a {
                         color: var(--color-turquoise);
                         font-size: 1.4rem;
+                        transition: 0.3s all;
+                        &:hover {
+                            color: var(--color-dark-gray);
+                        }
                         @media screen and (max-width: 1440px) {
                             font-size: 1.3rem;
                         }
@@ -5161,6 +5297,10 @@ footer {
                     font-size: 1.2rem;
                     font-weight: 600;
                     color: var(--color-white);
+                    transition: 0.3s all;
+                    &:hover {
+                        color: var(--color-dark-gray);
+                    }
                     @media screen and (max-width: 1440px) {
                         font-size: 1.1rem;
                     }

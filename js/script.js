@@ -68,7 +68,7 @@ var swiper = new Swiper(".mySwiperBlog", {
   },
 });
 
-var swiper = new Swiper(".mySwiperServices", {
+var swiper = new Swiper(".mySwiperServicesFull", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -163,6 +163,39 @@ var swiper = new Swiper(".mySwiperServices", {
     1600: {
       slidesPerView: 4,
       spaceBetween: 40,
+    },
+  },
+});
+var swiper = new Swiper(".mySwiperLastServices", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  spaceBetween: 40,
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1300: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+    },
+    1600: {
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
   },
 });
