@@ -136,36 +136,7 @@ var swiper = new Swiper(".mySwiperDoctors", {
     },
   },
 });
-var swiper = new Swiper(".mySwiperServices", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  slidesPerView: 2,
-  spaceBetween: 20,
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 50,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    1600: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-  },
-});
+
 var swiper = new Swiper(".mySwiperLastServices", {
   navigation: {
     nextEl: ".swiper-button-next",

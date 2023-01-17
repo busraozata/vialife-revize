@@ -2686,7 +2686,7 @@ header {
         margin-bottom: 8rem;
         text-align: right;
         @media screen and (max-width: $lg-breakpoint) {
-            margin-bottom: 1rem !important;
+            margin-bottom: 6rem !important;
         }
         span {
             margin-right: -3.3rem;
@@ -2937,6 +2937,9 @@ header {
             @media screen and (max-width: $lg-breakpoint) {
                 font-size: 1rem;
             }
+            @media screen and (max-width: $sm-breakpoint) {
+                font-size: 0.9rem;
+            }
         }
     }
 }
@@ -2953,7 +2956,7 @@ header {
         padding: 5rem 3rem 1rem 3rem;
     }
     @media screen and (max-width: $lg-breakpoint) {
-        padding: 5rem 1rem 1rem 1rem;
+        padding: 3rem 1rem 1rem 1rem;
     }
     .top {
         @media screen and (max-width: $lg-breakpoint) {
@@ -2967,6 +2970,10 @@ header {
         -webkit-box-shadow: -1px 4px 10px -7px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -1px 4px 10px -7px rgba(0, 0, 0, 0.75);
         box-shadow: -1px 4px 10px -7px rgba(0, 0, 0, 0.75);
+        @media screen and (max-width:$lg-breakpoint) {
+            padding: 1rem;
+            box-shadow: none;
+        }
     }
     .content {
         .img-wrapper {
@@ -2999,8 +3006,11 @@ header {
                     height: 34rem;
                     object-fit: cover;
                 }
+                @media screen and (max-width: $lg-breakpoint) {
+                    height: 25rem;
+                }
                 @media screen and (max-width: $sm-breakpoint) {
-                    height: 20rem;
+                    height: 14rem;
                 }
             }
         }
@@ -3014,8 +3024,8 @@ header {
                 font-size: 2rem;
             }
             @media screen and (max-width: $sm-breakpoint) {
-                font-size: 1.6rem;
-                margin-bottom: 1rem;
+                font-size: 1.3rem;
+                margin: 1rem 0rem;
             }
         }
         p {
@@ -3026,6 +3036,9 @@ header {
             text-align: left !important;
             @media screen and (max-width: 1440px) {
                 font-size: 1rem;
+            }
+            @media screen and (max-width: $sm-breakpoint) {
+                font-size: 0.9rem;
             }
         }
     }
@@ -4135,6 +4148,7 @@ header {
     @media screen and (max-width: $lg-breakpoint) {
         padding: 3rem 1rem 2rem 1rem;
     }
+
     .left-area {
         padding: 0;
         @media screen and (max-width: $lg-breakpoint) {
@@ -4383,7 +4397,7 @@ header {
             }
             @media screen and (max-width: $sm-breakpoint) {
                 font-size: 4rem;
-                margin-bottom: 0rem;
+                margin-bottom: 5rem;
             }
         }
         p {
@@ -4396,6 +4410,14 @@ header {
             @media screen and (max-width: $lg-breakpoint) {
                 font-size: 0.9rem;
             }
+            @media screen and (max-width: $sm-breakpoint) {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .mb-5{
+        @media screen and (max-width: $sm-breakpoint) {
+            margin-bottom: 1rem !important;
         }
     }
     .card {
@@ -4411,9 +4433,6 @@ header {
         }
         img {
             border-radius: 0;
-            @media screen and (max-width: $sm-breakpoint) {
-                display: none;
-            }
         }
         .link {
             position: relative;
@@ -5126,6 +5145,7 @@ footer {
     margin-top: 2rem;
 
     .footer-left {
+        padding: 0;
         img {
             margin-bottom: 2rem;
             @media screen and (max-width: 1750px) {
@@ -5136,12 +5156,14 @@ footer {
             }
         }
         background-color: #f9f9f9;
-        padding: 6rem 4rem 4rem 2rem;
-        @media screen and (max-width: $xl-breakpoint) {
-            padding: 6rem 2rem 4rem 2rem;
-        }
-        @media screen and (max-width: $lg-breakpoint) {
-            padding: 3rem 1rem 3rem 1rem;
+        .top-area {
+            padding: 6rem 4rem 4rem 2rem;
+            @media screen and (max-width: $xl-breakpoint) {
+                padding: 6rem 2rem 4rem 2rem;
+            }
+            @media screen and (max-width: $lg-breakpoint) {
+                padding: 3rem 1rem 3rem 1rem;
+            }
         }
         .col-lg-6 {
             @media screen and (max-width: $lg-breakpoint) {
@@ -5313,6 +5335,44 @@ footer {
                         font-size: 0.9rem;
                     }
                 }
+            }
+        }
+    }
+    .copyright {
+        padding: 1rem 4rem 1rem 4rem;
+        @media screen and (max-width: $xl-breakpoint) {
+            padding: 1rem 2rem 1rem 2rem;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+            padding: 1rem 1rem 1em 1rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+            span{
+                margin-bottom: 0.5rem;
+                display: block;
+                font-size: 0.8rem !important;
+            }
+            .col-lg-3, .col-lg-9 {
+                justify-content: center !important;
+                text-align: center;
+            }
+        }
+
+        background-color: var(--color-white);
+        /* position: absolute; */
+        bottom: 0;
+        left: 0;
+        span {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        img {
+            filter: invert(9);
+            max-width: 2.5rem;
+            margin-bottom: 0rem !important;
+            @media screen and (max-width: $sm-breakpoint) {
+              max-width: 1.7rem;
             }
         }
     }
